@@ -44,10 +44,7 @@ Run the migrations
 
 python manage.py migrate
 ```
-Create a superuser if you want to access the admin panel
 
-python manage.py createsuperuser
-Run the following commands to create the categories and some fake products
 
 python manage.py createcategories
 python manage.py createfakeproducts 100

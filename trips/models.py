@@ -83,9 +83,9 @@ class Trip(models.Model):
     trip_type = models.CharField(max_length=2, choices=TYPES)
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
-    price_for_adult = models.FloatField()
-    price_for_child = models.FloatField()
-    promoted = models.IntegerField()
+    price_for_adult = models.FloatField(null=True, default="not mentioned by owner",blank=True)
+    price_for_child = models.FloatField(null=True, default="not mentioned by owner", blank=True)
+    promoted = models.IntegerField(null=True, default="not mentioned by owner", blank=True,)
     nr_of_adult = models.IntegerField()
     nr_of_child = models.IntegerField()
 

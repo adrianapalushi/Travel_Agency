@@ -14,6 +14,9 @@ admin.site.register(City)
 class HotelAdmin(admin.ModelAdmin):
     list_display = ["name", "standard"]
 
+class TripAdmin(admin.ModelAdmin):
+    list_display = ["from_city", "to_city", "date_of_departure"]
+
 
 
 admin.site.register(Airport)

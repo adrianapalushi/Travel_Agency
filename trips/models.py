@@ -58,3 +58,35 @@ class Airport(models.Model):
 
     def __str__(self) -> str:
         return self.name
+
+
+class Trip(models.Model):
+    BED_AND_BREAKFAST = 'BB'
+    HALF_BOARD = 'HB'
+    FULL_BOARD = 'FB'
+    ALL_INCLUSIVE = 'AI'
+    TYPES = [
+        (BED_AND_BREAKFAST, 'Bed & Breakfast'),
+        (HALF_BOARD, 'Half Board'),
+        (FULL_BOARD, 'Full Board'),
+        (ALL_INCLUSIVE, 'All Inclusive'),
+    ]
+
+    from_city = models.ForeignKey(City, null=True, on_delete=models.CASCADE, related_name="from_trips")
+    from_airport = models.ForeignKey(Airport, null=True, on_delete=models.SET_NULL, related_name="from_trips")
+    to_city = models.ForeignKey(City, null=True, on_delete=models.CASCADE, related_name="to_trips")
+    to_hotel = models.ForeignKey(Hotel, null=True, on_delete=models.SET_NULL, related_name="to_trips")
+    to_airport = models.ForeignKey(Airport, null=True, on_delete=models.SET_NULL, related_name="to_trips")
+    date_of_departure = models.DateTimeField()
+    date_of_return = models.DateTimeField()
+    number_of_days = models.IntegerField()
+    trip_type = models.CharField(max_length=2, choices=TYPES)
+    created = models.DateTimeField(auto_now_add=True)
+    modified = models.DateTimeField(auto_now=True)
+    price_for_adult = models.FloatField()
+    price_for_child = models.FloatField()
+    promoted = models.IntegerField()
+    nr_of_adult = models.IntegerField()
+    nr_of_child = models.IntegerField()
+
+

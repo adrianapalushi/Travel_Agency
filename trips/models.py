@@ -83,10 +83,13 @@ class Trip(models.Model):
     trip_type = models.CharField(max_length=2, choices=TYPES)
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
-    price_for_adult = models.FloatField(null=True, default="not mentioned by owner",blank=True)
-    price_for_child = models.FloatField(null=True, default="not mentioned by owner", blank=True)
-    promoted = models.IntegerField(null=True, default="not mentioned by owner", blank=True,)
-    nr_of_adult = models.IntegerField()
-    nr_of_child = models.IntegerField()
+    price_for_adult = models.FloatField(null=True, blank=True)
+    price_for_child = models.FloatField(null=True, blank=True)
+    promoted = models.BooleanField(default=False)
+    number_of_adults = models.IntegerField(default=0)
+    number_of_children = models.IntegerField(default=0)
 
-
+class Purchase(models.Model):
+    purchase = models.ForeignKey(Trip, on_delete=models.CASCADE)
+    number_of_adults = models.IntegerField()
+    number_of_children = models.IntegerField()

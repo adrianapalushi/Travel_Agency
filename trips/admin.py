@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Continent, Country, City, Hotel, Airport, Trip
+from .models import Continent, Country, City, Hotel, Airport, Purchase, Trip
 
 admin.site.register(Continent)
 
@@ -20,4 +20,5 @@ class TripAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Airport)
-admin.site.register(Trip)
+admin.site.register(Trip, TripAdmin)
+admin.site.register(Purchase)

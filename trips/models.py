@@ -1,3 +1,4 @@
+from tabnanny import verbose
 from django.db import models
 from django.forms import CharField
 
@@ -88,6 +89,21 @@ class Trip(models.Model):
     promoted = models.BooleanField(default=False)
     number_of_adults = models.IntegerField(default=0)
     number_of_children = models.IntegerField(default=0)
+
+
+class Photo(models.Model):
+    photo = models.ImageField(upload_to='trips/')
+    trip = models.ForeignKey(Trip, on_delete=models.CASCADE, related_name='photos')
+    caption = models.CharField(max_length=255, null=True, blank=True)
+    is_cover = models.BooleanField(default=False)
+
+    class Meta:
+        verbose_name = "photo"
+        verbose_name_plural = "photos"
+
+    def __str__(self) -> str:
+        return self.caption if self.caption is not None else self.photo.name
+
 
 class Purchase(models.Model):
     purchase = models.ForeignKey(Trip, on_delete=models.CASCADE)

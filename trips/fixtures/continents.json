@@ -1,0 +1,44 @@
+[
+{
+  "model": "trips.continent",
+  "pk": 1,
+  "fields": {
+    "name": "Europe"
+  }
+},
+{
+  "model": "trips.continent",
+  "pk": 2,
+  "fields": {
+    "name": "Asia"
+  }
+},
+{
+  "model": "trips.continent",
+  "pk": 3,
+  "fields": {
+    "name": "Africa"
+  }
+},
+{
+  "model": "trips.continent",
+  "pk": 4,
+  "fields": {
+    "name": "South America"
+  }
+},
+{
+  "model": "trips.continent",
+  "pk": 5,
+  "fields": {
+    "name": "North America"
+  }
+},
+{
+  "model": "trips.continent",
+  "pk": 6,
+  "fields": {
+    "name": "Australia"
+  }
+}
+]

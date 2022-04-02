@@ -1,0 +1,114 @@
+[
+{
+  "model": "trips.country",
+  "pk": 1,
+  "fields": {
+    "name": "Italy",
+    "continent": 1
+  }
+},
+{
+  "model": "trips.country",
+  "pk": 2,
+  "fields": {
+    "name": "France",
+    "continent": 1
+  }
+},
+{
+  "model": "trips.country",
+  "pk": 3,
+  "fields": {
+    "name": "England",
+    "continent": 1
+  }
+},
+{
+  "model": "trips.country",
+  "pk": 4,
+  "fields": {
+    "name": "Thailand",
+    "continent": 2
+  }
+},
+{
+  "model": "trips.country",
+  "pk": 5,
+  "fields": {
+    "name": "Egypt",
+    "continent": 3
+  }
+},
+{
+  "model": "trips.country",
+  "pk": 6,
+  "fields": {
+    "name": "Brasil",
+    "continent": 4
+  }
+},
+{
+  "model": "trips.country",
+  "pk": 7,
+  "fields": {
+    "name": "Peru",
+    "continent": 4
+  }
+},
+{
+  "model": "trips.country",
+  "pk": 8,
+  "fields": {
+    "name": "United States",
+    "continent": 5
+  }
+},
+{
+  "model": "trips.country",
+  "pk": 9,
+  "fields": {
+    "name": "Mexico",
+    "continent": 5
+  }
+},
+{
+  "model": "trips.country",
+  "pk": 10,
+  "fields": {
+    "name": "Canada",
+    "continent": 5
+  }
+},
+{
+  "model": "trips.country",
+  "pk": 11,
+  "fields": {
+    "name": "Australia",
+    "continent": 6
+  }
+},
+{
+  "model": "trips.country",
+  "pk": 12,
+  "fields": {
+    "name": "Spain",
+    "continent": 1
+  }
+},
+{
+  "model": "trips.country",
+  "pk": 13,
+  "fields": {
+    "name": "Greece",
+    "continent": 1
+  }
+},
+{
+  "model": "trips.country",
+  "pk": 14,
+  "fields": {
+    "name": "Turkey",
+    "continent": 1
+  }
+}
+]

@@ -1,0 +1,114 @@
+[
+{
+  "model": "trips.city",
+  "pk": 1,
+  "fields": {
+    "name": "Rome",
+    "country": 1
+  }
+},
+{
+  "model": "trips.city",
+  "pk": 2,
+  "fields": {
+    "name": "Paris",
+    "country": 2
+  }
+},
+{
+  "model": "trips.city",
+  "pk": 3,
+  "fields": {
+    "name": "Barcelona",
+    "country": 12
+  }
+},
+{
+  "model": "trips.city",
+  "pk": 4,
+  "fields": {
+    "name": "Madrid",
+    "country": 12
+  }
+},
+{
+  "model": "trips.city",
+  "pk": 5,
+  "fields": {
+    "name": "Rio de Janeiro",
+    "country": 6
+  }
+},
+{
+  "model": "trips.city",
+  "pk": 6,
+  "fields": {
+    "name": "Lima",
+    "country": 7
+  }
+},
+{
+  "model": "trips.city",
+  "pk": 7,
+  "fields": {
+    "name": "London",
+    "country": 3
+  }
+},
+{
+  "model": "trips.city",
+  "pk": 8,
+  "fields": {
+    "name": "Istanbul",
+    "country": 14
+  }
+},
+{
+  "model": "trips.city",
+  "pk": 9,
+  "fields": {
+    "name": "Athens",
+    "country": 13
+  }
+},
+{
+  "model": "trips.city",
+  "pk": 10,
+  "fields": {
+    "name": "Detroit",
+    "country": 8
+  }
+},
+{
+  "model": "trips.city",
+  "pk": 11,
+  "fields": {
+    "name": "Los Angeles",
+    "country": 8
+  }
+},
+{
+  "model": "trips.city",
+  "pk": 12,
+  "fields": {
+    "name": "Cairo",
+    "country": 5
+  }
+},
+{
+  "model": "trips.city",
+  "pk": 13,
+  "fields": {
+    "name": "Melbourne",
+    "country": 11
+  }
+},
+{
+  "model": "trips.city",
+  "pk": 14,
+  "fields": {
+    "name": "Bangkog",
+    "country": 4
+  }
+}
+]

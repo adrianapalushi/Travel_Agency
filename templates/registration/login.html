@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="d-flex h-100 w-100 justify-content-center align-items-center">
+    <form action="" method="post" novalidate class="w-50">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <div class="border-top mt-4 pt-4 text-center">
+            <button type="submit" class="btn btn-primary btn-lg">Sign In</button>
+        </div>
+    </form>
+</div>
+{% endblock content %}

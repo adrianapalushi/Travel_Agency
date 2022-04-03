@@ -14,7 +14,16 @@ def home(request):
         "promoted_trips": promoted_trips
     })
 
+def tickets(request):
+   
+    return render(request, "pages/tickets.html",)
+
 
 def about(request):
    
     return render(request, "pages/about.html",)
+
+
+def contact(request):
+   
+    return render(request, "pages/contact.html",)

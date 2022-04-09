@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{ trip.get_trip_type_display }}</h1>
+<p>Depart from: {{ trip.from_airport.name }}, {{ trip.from_city.name }}</p>
+<p>Destination: {{ trip.to_airport.name }}, {{ trip.to_city.name }}</p>
+<p>Accomodation: {{ trip.to_hotel.name }}</p>
+<p>Departure Date: {{ trip.date_of_departure }}</p>
+<p>Return Date: {{ trip.date_of_return }}</p>
+<p>Price for Adults: ${{ trip.price_for_adult }}</p>
+<p>Adults: {{ trip.number_of_adults }}</p>
+<p>Price for Children: ${{ trip.price_for_child }}</p>
+<p>Children: {{ trip.number_of_children }}</p>
+<p>Is promoted: {{ trip.promoted }}</p>
+<hr />
+<div class="d-flex flex-wrap gap-2 justify-content-around mb-4">
+  {% for photo in trip.photos.all %}
+  <div class="card">
+    <img
+      src="{{ photo.photo_sm.url }}"
+      alt="{{ photo.caption }}"
+      width="{{ photo.photo_sm.width }}"
+      height="{{ photo.photo_sm.height }}"
+      class="card-img-top"
+    />
+    <div class="card-body">
+      <p class="card-text">photo.caption</p>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock content %}

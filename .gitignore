@@ -153,4 +153,4 @@ cython_debug/
 
 # django media uploads
 media/
-
+static/

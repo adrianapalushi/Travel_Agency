@@ -1,4 +1,8 @@
+import os
 from pathlib import Path
+
+import django_heroku
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -76,24 +80,26 @@ WSGI_APPLICATION = 'agency.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    },
-    # "checkins": {
-    #     'ENGINE': 'django.db.backends.mysql',  
-    #     'NAME': 'checkins',  
-    #     'USER': 'loser',  
-    #     'PASSWORD': 'whatever',
-    #     'HOST': '127.0.0.1',  
-    #     'PORT': '3306',  
-    #     'OPTIONS': {  
-    #         'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"  
-    #     }  
-    # }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     },
+#     # "checkins": {
+#     #     'ENGINE': 'django.db.backends.mysql',  
+#     #     'NAME': 'checkins',  
+#     #     'USER': 'loser',  
+#     #     'PASSWORD': 'whatever',
+#     #     'HOST': '127.0.0.1',  
+#     #     'PORT': '3306',  
+#     #     'OPTIONS': {  
+#     #         'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"  
+#     #     }  
+#     # }
+# }
 
+sqlite_url = f"sqlite:///{(BASE_DIR / 'db.sqlite3').as_posix()}"
+DATABASES = {"default": dj_database_url.parse(os.environ.get("DATABASE_URL", sqlite_url))}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -163,3 +169,6 @@ REGISTRATION_AUTO_LOGIN = False
 
 
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+
+
+django_heroku.settings(locals())
